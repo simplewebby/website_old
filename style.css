@@ -1,0 +1,346 @@
+body {
+          padding: 0;
+          margin: 0;
+          background: #000;
+          font-family: 'Julius Sans One', 'Lato', sans-serif;
+          font-weight: 900;
+          color: #555;
+    }
+    .navbar {
+        grid-column: 1;
+        grid-row: 1/3;
+        background: #000;
+
+    }
+    .navbar ul li {
+      padding: 2.3rem 0.5rem;
+    }
+    .navbar ul li a{
+      color: #777;
+    }
+    /* .gap{
+       border-bottom: #fff 3px dotted;
+    } */
+    .navbar ul li a:hover{
+      color: #eee;
+      padding-bottom: 5px;
+      border-bottom: #f3cc0df0 solid;
+
+    }
+    .navbar ul li a[data-tool-tip]{
+    position: relative;
+    }
+    .navbar ul li a[data-tool-tip]::after{
+    content: attr(data-tool-tip);
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    background: #777;
+    font-size: .8em;
+    padding: 1em 3em;
+    left: 3rem;
+    top: 0;
+    z-index: 1;
+    white-space: nowrap;
+    transform: scale(0);
+    transition: transform ease-out 150ms,
+    bottom ease-out 150ms;
+    }
+    .navbar ul li a[data-tool-tip]:hover::after{
+    transform: scale(1);
+
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        grid-auto-rows: minmax(100px, auto);
+        margin: 0 auto;
+        min-width: 100%;
+    }
+    .container>*{
+
+        text-align: center;
+
+    }
+    header{
+        grid-column: 2/13;
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #888;
+        background: #000;
+        text-shadow :  2px 6px 5px #777;
+    }
+    header h4 span {
+      color: #f3cc0df0;
+    }
+    p {
+      padding: 1rem;
+    }
+    a{
+      color: #888;
+    }
+    a:hover{
+      color: #f3cc0df0;
+    }
+    span {
+      color: #f3cc0df0;
+    }
+    .bx {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-rows: minmax(300px, auto);
+      width: 100%;
+      margin: 0;
+    }
+    .bx a {
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .bx:hover {
+      color: #f3cc0df0;
+      opacity: .6;
+      border: #f3cc0df0 1px dotted;
+    }
+    .bx img {
+      width: 100%;
+      height: 100%;
+    }
+    .name {
+      grid-column: 1/13;
+      grid-row:3 ;
+      color: #555;
+    }
+    .box{
+        grid-column: 1/5;
+        grid-row:4/7 ;
+        background: #111;
+
+    }
+    .box1{
+      grid-column: 5/9;
+        grid-row:4/6;
+        background: #222;
+    }
+    .box2{
+        grid-column: 9/13;
+            grid-row:4/7 ;
+            background: #111;
+        }
+
+    .box3{
+        grid-column: 1/5;
+            grid-row:7/9 ;
+            background: #222;
+        }
+
+    .box4{
+        grid-column: 5/9;
+            grid-row:6/9 ;
+            background-color: #111;
+        }
+    .box5{
+        grid-column: 9/13;
+            grid-row:7/9;
+            background: #222;
+        }
+    .box6 {
+      grid-column: 1/13;
+      grid-row:9/11 ;
+        color: #555;
+    }
+    .box7 {
+      grid-column: 6/12;
+      grid-row:10 ;
+      color: #555;
+      font-size: 1.2rem
+    }
+    .box8 {
+      grid-column: 3/5;
+      grid-row:10;
+
+    }
+    .box8 img {
+      width: 100%;
+      padding-top: 3rem;;
+    }
+
+
+
+
+
+
+
+    section{
+        grid-column: 2/13;
+        grid-row: 2/3;
+        position: relative;
+        text-align: center;
+        margin-bottom: -5px;
+    }
+    .text{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow : 4px 2px 10px #777;
+    font-weight: bold;
+    color: #ddd;
+    }
+
+    footer{
+        grid-column:1/13;
+        grid-row: 11/13;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+    }
+
+    /****************** Go To Top Button ******************/
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 5%;
+        right: 5%;
+        bottom: 10%;
+        z-index: 99;
+        font-size: 2rem;
+        outline: none;
+        cursor: pointer;
+        background: #888;
+        border-radius: 50%;
+        border: #eee dotted 1px;
+    }
+    #myBtn:hover {
+      background: #eee;
+      border: #f3cc0df0 dotted 2px;
+    }
+
+
+
+    @media (max-width:600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(100px, auto);
+        width: 100%;
+        margin: 0;
+    }
+    .gap img {
+      width: 40px;
+    }
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 1/13;
+        grid-row: 1;
+    }
+    .navbar ul li{
+        display: inline;
+         border: none;
+         padding: 1.5rem 1rem;
+    }
+    header{
+      grid-column: 1/13;
+       grid-row:2 ;
+    }
+    header h4{
+      font-size: 1.9rem;
+    }
+    .name {
+      grid-column: 1/13;
+      grid-row:4 ;
+
+    }
+    section{
+        grid-column: 1/13;
+        grid-row: 3;
+    }
+
+    h3{
+        font-size: 1.5rem;
+    }
+    .box{ grid-column: 1/13;
+        grid-row: 5;}
+     .box1{ grid-column: 1/13;
+        grid-row: 6;}
+     .box2{ grid-column: 1/13;
+        grid-row: 7;}
+      .box3{ grid-column: 1/13;
+        grid-row: 8;}
+      .box4{ grid-column: 1/13;
+        grid-row: 9;}
+       .box5{ grid-column: 1/13;
+        grid-row: 10;}
+        .box6{ grid-column: 1/13;
+          grid-row: 11;}
+         .box7{ grid-column: 1/13;
+          grid-row: 12;
+        background-color: #111;}
+          .box8{display: none;}
+
+
+
+    .fas {
+        font-size: 1.5rem;
+    }
+    .far {
+        font-size: 1.5rem;
+    }
+    .fab {
+        font-size: 1.5rem;
+    }
+    .bx {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-rows: minmax(300px, auto);
+      width: 100%;
+      margin: 0;
+    }
+    .bx .fab {
+      font-size: 8rem;
+    }
+    .name h4 {
+        font-size: 2rem;
+    }
+    .box7 p {
+        font-size: 1rem;
+    }
+    
+
+    footer{
+        grid-column:1/13;
+        grid-row: 14;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    }
+
+    @media (min-width:1300px) {
+      .container {
+          display: grid;
+          grid-template-columns: repeat(12,1fr);
+          grid-auto-rows: minmax(100px, auto);
+          margin: 0 auto;
+          min-width: 1000px;
+      }
+      .container>*{
+
+          text-align: center;
+      }
+
+    footer{
+        grid-column:1/13;
+        grid-row: 11/13;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+}

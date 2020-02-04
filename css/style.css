@@ -1,0 +1,632 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway',
+  sans-serif;
+}
+html, body{
+  background-color: #000;
+  color: #a4a4a5;
+  line-height: 1.9;
+  text-align: center;
+
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20%;
+  right: 5px;
+  z-index: 99;
+  font-size: 25px;
+  border: none;
+  outline: none;
+  background-color: #ccc;
+  color: #ddd;
+  cursor: pointer;
+  padding: 4px 4px 4px 4px;
+  border-radius: 16px;
+  
+}
+#smallLogo {
+  padding-bottom: 20px;
+  
+}
+span {
+  color: fuchsia;
+}
+
+/****************  Navigation **************/
+.topnav {
+  overflow: hidden;
+  background: #000;
+  height: 90px;
+  font-size: 18px;
+  border-bottom: 8px solid fuchsia;
+  text-transform: uppercase;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: #888;
+  text-align: center;
+  padding: 21px 28px;
+  text-decoration: none;
+
+}
+
+.topnav a:hover {
+  color: fuchsia;
+}
+
+.topnav .icon {
+  display: none;
+  color:fuchsia;
+}
+.topnav .icon:hover {
+  color: fuchsia;
+}
+.nav {
+  display: flex;
+ justify-content: center;
+}
+
+
+
+@media(max-width:750px){
+  .portfolio{
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .navbar-nav a{
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .nav {
+   display: block;
+    
+  }
+  #smallLogo {
+    padding-bottom: 8px;
+  }
+  
+}
+
+@media screen and (max-width: 1200px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav {
+    height: 5%;
+    padding:  0;
+  }
+  .nav {
+    display: block;
+  }
+   a.icon  {
+    color: #eee;
+
+  }
+
+}
+@media screen and (max-width: 1200px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+
+  }
+  
+}
+
+/****************Portfolio Section***************/
+
+#content{
+  position: relative;
+  animation-name: content;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  font-size: 21px;
+}
+@keyframes content {
+  0%{left: -1000px;}
+    100%{left: 0;}
+}
+
+#box1{
+  position: relative;
+  animation-name: box1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes box1 {
+  100%{right:-1150px;}
+    100%{right: 0;}
+}
+#box2{
+  position: relative;
+  animation-name: box2;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes box2 {
+  100%{right:-1150px;}
+    100%{right: 0;}
+}
+#box3{
+  position: relative;
+  animation-name: box3;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes box3 {
+  0%{right: -1500px;}
+    100%{right: 0;}
+}
+#box4{
+  position: relative;
+  animation-name: box4;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes box4 {
+  0%{right: -1500px;}
+    100%{right: 0;}
+}
+
+#box5{
+  position: relative;
+  animation-name: box5;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes box5 {
+  100%{right:-1150px;}
+    100%{right: 0;}
+}
+#box6{
+  position: relative;
+  animation-name: box6;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes box6 {
+  100%{right:-1150px;}
+    100%{right: 0;}
+}
+
+
+#box9{
+  position: relative;
+  animation-name: box9;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes box9 {
+  0%{right: -2200px;}
+    100%{right: 0;}
+}
+#box10{
+  position: relative;
+  animation-name: box10;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes box10 {
+  0%{right: -2200px;}
+    100%{right: 0;}
+}
+
+#box11{
+  position: relative;
+  animation-name: box11;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+}
+@keyframes box11 {
+  100%{right:-1150px;}
+    100%{right: 0;}
+}
+
+
+
+
+/* **************Images*************/
+.im {
+  width: 450px;
+  height: 400px;
+}
+.im {
+  position: relative;
+  animation-name: content;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0.5;
+  transition-property: transform;
+  transition-duration: 2s;
+}
+.im:hover {
+opacity: 1;
+}
+
+
+/* Button */
+.btn {
+  display: inline-block;
+  color: fuchsia;
+  text-decoration: none;
+  padding: .5rem 1.5rem;
+  border: fuchsia 2px solid;
+  border-radius: 30px;
+  margin-top: 70px;
+  opacity: 0;
+  animation-name: btn;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+  transition-duration: 2s;
+}
+.btn:hover {
+  transform: rotateY(180deg);
+color: fuchsia;
+}
+
+@keyframes btn {
+  0%{opacity: 0;}
+    100%{opacity: 2;}
+}
+
+
+
+
+
+#particles-js {
+  background: #000;
+  height: 895px;
+  margin-bottom: -20px;
+  z-index: 1;
+}
+#login{
+  background: #fff;
+  opacity: 0.9;
+  padding: 2em;
+  border: #ccc 2px solid;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+
+}
+#login input[type="text"], login input[type="password"]{
+  padding: 7px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+.intro {
+  position: absolute;
+  width: 100%;
+
+}
+
+
+#showcase{
+  height: 300px;
+}
+#showcase h1{
+  font-size: 55px;
+  line-height: 1.3;
+  position: relative;
+  animation: heading;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes heading {
+  0%{top: -50px;}
+    100%{top: 180px;}
+}
+.btn {
+  margin-bottom: 300px;
+}
+
+/*boxes*/
+
+
+
+.boxes{
+  text-align: center;
+  margin: 50px 0 ;
+  padding: 20px;
+}
+
+.container2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+/*boxes  about*/
+
+.boxes2{
+  text-align: center;
+  margin: 20px 0 ;
+  padding: 20px;
+  height: 700px;
+  grid-template-columns: 1fr 1fr;
+ grid-auto-rows: minmax(100px, auto);
+
+}
+.about{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 23px;
+
+}
+ #box7{
+  margin-left: 20%;
+  margin-right: 10%;
+  text-align: center;
+
+}
+#box8{
+  margin-left: 10%;
+  margin-right: 20%;
+  text-align: center;
+}
+.about h3 {
+  font-weight: 900;
+  font-size: 36px;
+}
+
+ #aboutH {
+  font-weight: 900;
+  font-size: 36px;
+  color: #a4a4a5;
+  background: #000;
+  border-bottom: 10px solid #75777a;
+  border-top: 8px solid fuchsia;
+  margin-right: -20px;
+  margin-left: -20px;
+  margin-top: -170px;
+  padding: 20px;
+  
+}
+
+#portfolio {
+  width: 100%;
+  height: 100px;
+  font-weight: 900;
+  font-size: 36px;
+  color: #a4a4a5;
+  background: #000;
+  border-bottom: 10px solid #75777a;
+  border-top: 8px solid fuchsia;
+  padding: 20px;
+}
+
+
+@media(max-width:1324px){
+  .container2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    justify-content: center;
+  }
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20%;
+    right: 5px;
+    z-index: 99;
+    font-size: 26px;
+    border: none;
+    outline: none;
+    color: #ddd;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    font-size: 18px;
+  }
+  body {
+    font-size: 17px;
+  }
+  #showcase h1 {
+    font-size: 33px;
+  }
+  .im {
+    width: 400px;;
+    height: 380px;
+  }
+  .boxes2{
+    margin-bottom: 40px;
+  }
+  
+
+  #aboutH {
+   font-weight: 900;
+   font-size: 30px;
+   color: #a4a4a5;
+   background: #000;
+   border-bottom: 10px solid #75777a;
+   border-top: 8px solid fuchsia;
+   margin-right: -20px;
+   margin-left: -20px;
+   margin-top: -170px;
+   height: 108px;
+ }
+
+ #portfolio {
+   width: 100%;
+   height: 105px;
+   font-weight: 900;
+   font-size: 32px;
+   color: #a4a4a5;
+   background: #000;
+   border-bottom: 10px solid #75777a;
+   border-top: 8px solid fuchsia;
+ }
+
+}
+@media(max-width:600px){
+  .container2{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20%;
+  right: 5px;
+  z-index: 99;
+  font-size: 10px;
+  border: none;
+  outline: none;
+ color: #ddd;
+  cursor: pointer;
+  padding: 4px;
+  
+}
+
+  .about{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-top: 40px;
+   font-size: 17px;
+  }
+  .boxes2{
+    margin-bottom: 400px;
+  }
+  .portfolio{
+    margin-top: -20px;
+  }
+  .im {
+    width: 300px;;
+    height: 290px;
+  }
+  body {
+    font-size: 17px;
+    height: 100%;
+  }
+  #showcase h1 {
+    font-size: 33px;
+  }
+  .about h3 {
+    font-weight: 500;
+    font-size: 23px;
+  }
+  .about p{
+    font-size: 17px;
+    text-align: center;
+    
+  }
+  .fa-arrow-circle-up {
+    color: #eee;
+    font-size: 30px;
+  }
+.fa-paint-brush {
+  font-size: 41px;
+}
+ .fa-code{
+font-size: 41px;
+ }
+
+  #aboutH {
+   font-weight: 900;
+   font-size: 28px;
+   color: #a4a4a5;
+   background: #000;
+   border-bottom: 10px solid #75777a;
+   border-top: 8px solid fuchsia;
+   margin-right: -20px;
+   margin-left: -20px;
+   margin-top: -170px;
+   height: 105px;
+ }
+
+ #portfolio h1 {
+   width: 100%;
+   height: 50px;
+   font-weight: 900;
+   font-size: 38px;
+   color: #a4a4a5;
+   background: #000;
+   border-bottom: 10px solid #75777a;
+   border-top: 8px solid fuchsia;
+   margin-top:30px;
+ }
+
+  #about h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 28px;
+    color: #a4a4a5;
+   
+  }
+
+  #box7{
+   margin-left: 20%;
+   margin-right: 20%;
+   text-align: center;
+   margin-bottom: 30px;
+
+ }
+ #box8{
+   margin-left: 20%;
+   margin-right: 20%;
+   text-align: center;
+ }
+
+
+}
+
+footer{
+  margin: 100px 0 0 0;
+  padding: 30px 0  20px 0 ;
+  background-color: #000;
+  color: #888;
+  text-align: center;
+  height: 300px;
+  border-top: solid #555 10px;
+
+}
+footer a {
+  text-decoration: none;
+    color: fuchsia;
+
+}
+
+footer a:hover {
+  border: 1px solid fuchsia;
+  color: #888;
+  border-radius: 4px;
+  padding: 8px;
+}
+#gh{
+  font-size: 20px;
+ 
+}
+#gh:hover{
+  background-color: #888;
+  color: fuchsia;
+}
+.fas {
+  color: fuchsia;
+}
